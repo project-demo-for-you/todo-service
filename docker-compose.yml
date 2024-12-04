@@ -9,7 +9,7 @@ services:
     volumes:
       - todo-service-data:/var/lib/postgresql/data
     ports:
-      - "5456:5432"
+      - "5467:5432"
     networks:
       - online-food-delivery-network
 
