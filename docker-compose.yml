@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "8070:8080"
+      - "8060:8080"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://todo-service:5432/todo_service_db
       SPRING_DATASOURCE_USERNAME: postgres
