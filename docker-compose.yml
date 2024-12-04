@@ -11,9 +11,9 @@ services:
     ports:
       - "5467:5432"
     networks:
-      - online-food-delivery-network
+      - todo-list-network
 
-  online-food-delivery-api:
+  todo-service-api:
     build:
       context: .
       dockerfile: Dockerfile
@@ -27,10 +27,10 @@ services:
     depends_on:
       - todo-service
     networks:
-      - online-food-delivery-network
+      - todo-list-network
 
 volumes:
   todo-service-data:
 networks:
-  online-food-delivery-network:
-    driver: bridge
+  todo-list-network:
+    external: true
